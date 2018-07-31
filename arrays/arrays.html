@@ -9,7 +9,13 @@
     <h1>JavaScript Arrays</h1>
 
     <script>
-// your code goes here
+
+var favthabme = prompt('What are your top 3 vavorite things about meet? Separate them with a comma and a space');
+var favthabme_list = favthabme.split(', ');
+favthabme_list.sort();
+var favthabme_join = favthabme_list.join();
+document.write(favthabme_join);
+
     </script>
 </body>
 

@@ -15,6 +15,26 @@ function isLetter(char) {
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
 }
 
+
+
+while (!(ispalindrom(possibility) == true))
+	possibility = prompt('write a palindrom');
+	
+function ispalindrom(possibility) {
+	possibility.trim();
+	possibility_new = possibility.split();
+	possibility_new.reverse();
+	possibility_new = possibility.join();
+	if (possibility_new===possibility){
+		return = true
+	}
+	else {
+		return = false
+	}
+}
+
+var possibility = prompt('write a palindrom');
+
 // Write your isPalindrome function here!
 
     </script>

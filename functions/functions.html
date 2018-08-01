@@ -15,25 +15,36 @@ function isLetter(char) {
     return "abcdefghijklmnopqrstuvwxyz".indexOf(char) >= 0;
 }
 
+var char = 'a'
 
+var nice = []
+var nice_new = []
 
-while (!(ispalindrom(possibility) == true))
-	possibility = prompt('write a palindrom');
-	
-function ispalindrom(possibility) {
+function ispalindrome(possibility) {
 	possibility.trim();
-	possibility_new = possibility.split();
-	possibility_new.reverse();
-	possibility_new = possibility.join();
-	if (possibility_new===possibility){
-		return = true
+	possibility_new = possibility.split('');
+	for (var i = 0 ; i<possibility_new.length; i++){
+		char = possibility_new[i]
+		if (true == isLetter(char)){
+			nice.push(possibility_new[i])
+		}
+	}
+	nice_new = nice
+	nice_new.reverse();
+	nice = nice.join('');
+	nice_new = nice_new.join('');
+	if (nice_new==nice){
+		alert("yes")
+		return true
 	}
 	else {
-		return = false
+		alert("no")
+		return false
 	}
 }
 
 var possibility = prompt('write a palindrom');
+ispalindrome(possibility);
 
 // Write your isPalindrome function here!
 
